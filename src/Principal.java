@@ -7,6 +7,9 @@ public class Principal implements Callback{
     String iteracion1,iteracion2,iteracion3,iteracion4, iteracion5;
     int num = 0;
     public Principal(){
+        /*
+        Este será el bucle que imprima cada hilo
+         */
         for (int i = 0; i < maximo; i++){
             Hilos hilos = new Hilos(this);
             hilos.setName("El hilo: "+(i+1)+" :");
@@ -14,8 +17,12 @@ public class Principal implements Callback{
         }
 
 
-    }
 
+
+    }
+    /*
+    llamada a cada iteración por un switch que ira sumando 1
+     */
     @Override
     public void acaba(String acaba1, int iterador) {
         switch(iterador){
